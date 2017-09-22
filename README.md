@@ -1,3 +1,5 @@
+[![](https://travis-ci.org/Lucas-C/pre-commit-hooks.svg?branch=master)](https://travis-ci.org/Lucas-C/pre-commit-hooks)
+
 Hooks for pre-commit that validate Markdown / RST files
 
 ## Usage
