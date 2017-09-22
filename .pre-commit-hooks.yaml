@@ -1,0 +1,5 @@
+-   id: rst-linter
+    name: Check .rst files with the same linter used by pypi.org
+    entry: rst_linter
+    language: python
+    files: \.rst$
