@@ -1,0 +1,2 @@
+# Only exist so that snyk pick it up: https://support.snyk.io/getting-started/languages-support
+readme_renderer
