@@ -35,6 +35,7 @@ def get_linter_error(filename):
 
     try:
         publish_parts(raw, writer=writer, settings_overrides=settings).get('fragment')
+        return False
     except SystemMessage:
         return output.getvalue()
 
