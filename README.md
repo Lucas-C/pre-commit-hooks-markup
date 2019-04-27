@@ -1,7 +1,7 @@
 [![](https://travis-ci.org/Lucas-C/pre-commit-hooks-markup.svg?branch=master)](https://travis-ci.org/Lucas-C/pre-commit-hooks-markup)
 [![Known Vulnerabilities](https://snyk.io/test/github/lucas-c/pre-commit-hooks-markup/badge.svg)](https://snyk.io/test/github/lucas-c/pre-commit-hooks-markup)
 
-Hooks for pre-commit that validate Markdown / RST files
+Hooks for [pre-commit](https://pre-commit.com) that validate Markdown / RST files
 
 ## Usage
 
