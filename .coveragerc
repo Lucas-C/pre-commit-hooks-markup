@@ -1,0 +1,5 @@
+# Workaround for this issue: https://github.com/nedbat/coveragepy/issues/883
+#   no such table: line_bits
+#   UNIQUE constraint failed: meta.key
+[run]
+parallel = True
