@@ -1,9 +1,7 @@
 language: python
 python: "3.6"
 install: pip install -U . -r dev-requirements.txt
-script:
-- rm -rf .coverage
-- pre-commit run --all-files
+script: pre-commit run --all-files
 notifications:
   email:
     on_success: never
