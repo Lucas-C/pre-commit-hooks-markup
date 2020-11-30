@@ -5,7 +5,7 @@ setup(
     name='pre-commit-hooks-markup',
     description='Hooks for pre-commit that validate Markdown / RST files',
     url='https://github.com/Lucas-C/pre-commit-hooks-markup',
-    version='1.0.0',
+    version='1.0.1',
 
     author='Lucas Cimon',
     author_email='lucas.cimon+pypi@gmail.com',

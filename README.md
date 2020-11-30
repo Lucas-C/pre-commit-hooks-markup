@@ -6,7 +6,7 @@ Hooks for [pre-commit](https://pre-commit.com) that validate Markdown / RST file
 ## Usage
 
     - repo: https://github.com/Lucas-C/pre-commit-hooks-markup
-      rev: v1.0.0
+      rev: v1.0.1
       hooks:
       - id: rst-linter
 

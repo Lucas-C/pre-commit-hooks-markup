@@ -22,7 +22,7 @@ def main(argv=None):
     return 1 if errors_found else 0
 
 
-def get_linter_error(filename, allow_raw):
+def get_linter_error(filename, allow_raw=False):
     output = io.StringIO()
 
     settings = SETTINGS.copy()
