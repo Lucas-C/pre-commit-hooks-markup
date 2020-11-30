@@ -8,12 +8,12 @@ from readme_renderer.rst import publish_parts, ReadMeHTMLTranslator, SETTINGS, S
 def main(argv=None):
     parser = argparse.ArgumentParser()
     parser.add_argument('filenames', nargs='*', help='filenames to check')
-    parser.add_argument('-r', '--raw-enabled', action='store_true', help='Allow the "raw" directive')
+    parser.add_argument('-r', '--allow-raw', action='store_true', help='Allow the "raw" directive')
     args = parser.parse_args(argv)
 
     errors_found = False
     for filename in args.filenames:
-        linter_error = get_linter_error(filename, args.raw_enabled)
+        linter_error = get_linter_error(filename, args.allow_raw)
         if linter_error:
             errors_found = True
             print('Syntax error found in ', filename, file=sys.stderr)
@@ -22,12 +22,12 @@ def main(argv=None):
     return 1 if errors_found else 0
 
 
-def get_linter_error(filename, raw_enabled):
+def get_linter_error(filename, allow_raw):
     output = io.StringIO()
 
     settings = SETTINGS.copy()
     settings['warning_stream'] = output
-    settings['raw_enabled'] = raw_enabled
+    settings['raw_enabled'] = allow_raw
 
     writer = Writer()
     writer.translator_class = ReadMeHTMLTranslator

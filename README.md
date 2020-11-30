@@ -13,7 +13,7 @@ Hooks for [pre-commit](https://pre-commit.com) that validate Markdown / RST file
 To enable the `.. raw::` directive, you can add:
 
       - id: rst-linter
-        args: [--raw-enable]
+        args: [--allow-raw]
 
 Note that this is a potential security hole, and will prevent rendering of the
 `README.rst` file on PyPI.
