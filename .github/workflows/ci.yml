@@ -22,16 +22,16 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Cache pip 🏗️
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cache/pip
-            # ~/.cache/pre-commit
-          key: ${{ runner.os }}-python-${{ matrix.python-version }}-pip-${{ hashFiles('requirements.txt') }}-git-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-python-${{ matrix.python-version }}-pip-${{ hashFiles('requirements.txt') }}
-            # ${{ runner.os }}-python-${{ matrix.python-version }}-
+      #- name: Cache pip 🏗️
+      #  uses: actions/cache@v3
+      #  with:
+      #    path: |
+      #      ~/.cache/pip
+      #      # ~/.cache/pre-commit
+      #    key: ${{ runner.os }}-python-${{ matrix.python-version }}-pip-${{ hashFiles('requirements.txt') }}-git-${{ github.sha }}
+      #    restore-keys: |
+      #      ${{ runner.os }}-python-${{ matrix.python-version }}-pip-${{ hashFiles('requirements.txt') }}
+      #      # ${{ runner.os }}-python-${{ matrix.python-version }}-
       - name: Install ⚙️
         run: |
           python -m pip install --upgrade pip setuptools wheel
