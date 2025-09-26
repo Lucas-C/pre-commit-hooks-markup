@@ -1,6 +1,7 @@
 from __future__ import print_function
 
-import argparse, io, sys
+import argparse, sys
+from io import StringIO
 
 from readme_renderer.rst import publish_parts, ReadMeHTMLTranslator, SETTINGS, SystemMessage, Writer
 
@@ -23,7 +24,7 @@ def main(argv=None):
 
 
 def get_linter_error(filename, allow_raw=False):
-    output = io.StringIO()
+    output = StringIO()
 
     settings = SETTINGS.copy()
     settings['warning_stream'] = output
@@ -32,7 +33,7 @@ def get_linter_error(filename, allow_raw=False):
     writer = Writer()
     writer.translator_class = ReadMeHTMLTranslator
 
-    with open(filename) as rst_content:
+    with open(filename, encoding="utf8") as rst_content:
         raw = rst_content.read()
 
     try:
